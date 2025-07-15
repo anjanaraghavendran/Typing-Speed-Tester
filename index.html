@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Speed Tester</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Typing Speed Tester</h1>
+    
+    <div class="level-select">
+      <label for="difficulty">Choose Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button onclick="startTest()">Start</button>
+    </div>
+
+    <div id="timerDisplay">Time: 0.00s</div>
+
+    <div class="test-box" id="testBox">
+      <p id="sentenceDisplay"></p>
+      <textarea id="typedInput" placeholder="Start typing here..." disabled></textarea>
+    </div>
+
+    <div class="results" id="results">
+      <p id="wpm"></p>
+      <p id="accuracy"></p>
+      <p id="time"></p>
+      <button onclick="restartTest()">Restart</button>
+    </div>
+  </div>
+
+  <script src="sentences.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
